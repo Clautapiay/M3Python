@@ -10,7 +10,7 @@ respuesta = {"si", "no"}
 persona = input("¿La persona responde a estimulos?").lower()
 if persona == "si":
     input("¿Es necesario llevarlo a un hospital?")
-    if persona == "si":
+    if persona == "si" or "no":
         print("Fin ciclo")
 elif persona == "no":
         print("Abrir vía aérea")
@@ -20,14 +20,23 @@ elif persona == "no":
              print("Fin ciclo")
         elif persona == "no":
              print("Administre 5 ventilaciones y llame a la ambulancia")
-    #AQUIIIIIIIII#
+
+             
+while persona == "no":
              input("Signos de Vida?")
-             if persona == "si" or "no":
-                input("LLegó la ambulancia?")
-                if persona == "si":
-                    print("Fin del ciclo")
-                elif persona == "no":
-                    print("signos de vida? reevaluar nuevamente")
+             if persona == "no":
+                print("Administrar compresiones toracicas hasta que llegue la ambulancia")
+                input("LLegó la ambulancia?")    
+                if persona == "no":
+                    print("reevaluar nuevamente ¿signos de vida? ")
+                else:
+                    print("Reevaluar a la espera de la ambulancia")
+                     
+
+            
+            
+        
+     
                       
 
 else:
